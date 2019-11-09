@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>用户列表</title>
+</head>
+<body>
+<form action="" th:each="userlist : ${users}">
+    用户编号：<input name="id" th:value="${userlist.id}"/><br>
+    用户姓名：<input type="text" name="password" th:value="${userlist.username}"/><br>
+    登录密码：<input type="text" name="username" th:value="${userlist.getPassword()}"/>
+    <hr>
+</form>
+</body>
+</html>

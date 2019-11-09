@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>用户信息</title>
+</head>
+<body>
+<form action="" th:object="${user}">
+    用户编号：<input name="id" th:value="${user.id}"/><br>
+    用户姓名：<input type="text" name="username" th:value="${user.getUsername()}"/><br>
+    登录密码：<input type="text" name="password" th:value="*{password}"/>
+</form>
+<hr>
+<div>
+    <pre>
+        在使用模板引擎时，Controller 层就不能用 @RestController 注解了，
+        因为在使用 Thymeleaf 模板时，返回的是视图文件名
+        如果使用 @RestController 的话，会把 index 当作 String 解析直接返回到页面了
+</pre>
+</div>
+</body>
+</html>

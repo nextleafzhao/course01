@@ -1,0 +1,19 @@
+#生产环境配置
+server:
+  port: 8002
+#thymeleaf缓存（建议生产环境设置为true）
+spring:
+  thymeleaf:
+    cache: true
+#常用的日志级别按照从高到低依次为:ERROR、WARN、INFO、DEBUG
+logging:
+  config: logback.xml
+  level:
+    com.hzht.course01.dao: trace
+
+#自定义配置
+url:
+  orderUrl: http://localhost:8002
+  userUrl: http://localhost:8003
+  shoppingUrl: http://localhost:8004
+  corsUrl:
